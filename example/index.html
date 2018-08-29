@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Factory class Demo</title>
+	<script src="../Factory.js"></script>
+	<script src="Shape.class.js"></script>
+	<script src="Circle.class.js"></script>
+</head>
+<body style="background-color:powderblue;">
+
+  <script>
+	var circle = new Circle( { x: 0, y: 0 } );
+	
+	console.log("Class :");
+	console.log(circle);
+	
+	console.log("----");
+	
+	circle.x = 1;
+	circle.y = 10;
+	console.log({x: circle.x, y: circle.y });
+	console.log(circle.position());
+	
+	console.log("----");
+	
+	console.log("call circle.circleFunction() :");
+	circle.circleFunction();
+	
+	console.log("----");
+	
+	console.log("call circle.destroy() :");
+	circle.destroy(), circle = null;
+	
+	console.log("----");
+	
+	if (!circle)
+		console.log("circle is deleted.");
+	
+  </script>
+</body>
+</html>
